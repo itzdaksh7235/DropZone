@@ -1,0 +1,273 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.icon {
+  color: #333;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 120px;
+}
+
+h2 {
+  color: #444;
+  margin: 15px 0;
+}
+
+p, span {
+  text-align: justify;
+  color: #333;
+}
+
+span {
+  color: #444;
+}
+
+#main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+#dropzone-container {
+  width: 34%;
+}
+
+#dropzone {
+  border: 2px dashed #b0afaf;
+  background-color: #fff;
+  padding: 13% 2%;
+  text-align: center;
+}
+
+#dropzone .dz-message {
+  font-size: 18px;
+  color: #999;
+}
+
+#uploadButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #222;
+  font-weight: 600;
+  border: 1px solid #777;
+  border-radius: 25px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+#uploadButton:hover {
+  background-color: #f0f0f0;
+}
+
+#image-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 17px;
+  width: 52%;
+  padding-bottom: 9%;
+  max-height: 70vh;
+}
+
+.image-box {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #c2c1c1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.image-box:hover {
+  background-color: #f0f0f0;
+}
+
+.image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.image-box.filled img {
+  display: block;
+}
+
+.image-box .delete-btn {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.image-box:hover .delete-btn {
+  display: block;
+}
+
+.close {
+  color: #aaa;
+  font-size: 38px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: -4px;
+  right: 10px;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-button i {
+  font-size: 20px;
+}
+
+.modal-button:hover {
+  background-color: #0056b3;
+}
+
+#Image {
+  max-width: 100%; 
+  max-height: 80vh;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 3%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.edit-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.edit-options .icon {
+  margin: 0 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 31%;
+  max-width: 450px;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.modal .icon {
+  font-size: 24px;
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 3%;
+  height: 10%;
+  width: 7%;
+  margin: 1% 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.43s ease;
+}
+
+.modal .icon:hover {
+  border: 1px solid #999;
+  background-color: #333;
+  color: #eee;
+}
+
+.done-button {
+  background-color: #007bff;
+  color: white;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 4%;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #006adb;
+  transition: background-color 0.3s;
+}
+.done-button-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.done-button:hover {
+  background-color: #006adb;
+  border: 1px solid #333;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+ 

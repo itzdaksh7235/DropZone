@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropZone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="main-container">
+            <div id="dropzone-container">
+                <form action="/file-upload" class="dropzone" id="dropzone">
+                    <div class="dz-message" data-dz-message>
+                        <div class="icon"><i class="fa-regular fa-images"></i></div>
+                        <h2>Drag photos and video here</h2>
+                        <span>Add up to 12 photos and a 1-minute video</span>
+                        <br><br>
+                        <button type="button" id="uploadButton">Upload from computer</button>
+                    </div>
+                </form>
+            </div>
+            <div id="image-container">
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+                <div class="image-box empty"></div>
+            </div>
+        </div>
+    </div>
+    <div id="editPopup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="Image" src="#" alt="Image" />
+            <div class="edit-options">
+                <div class="icon" id="crop-button"><i class="fas fa-crop"></i></div>
+                <div class="icon" id="crop-button"><i class="fa-solid fa-camera-rotate"></i></div>
+                <div class="icon" id="adjust-button"><i class="fas fa-adjust"></i></div>
+                <div class="icon" id="filter-button"><i class="fas fa-magic"></i></div>
+                <div class="icon" id="undo-button"><i class="fas fa-undo-alt"></i></div>
+            </div>
+            <div class="done-button-wrapper">
+                <button class="done-button">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cropperjs"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.1/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/npm/camanjs"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
